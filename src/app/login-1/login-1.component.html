@@ -1,77 +1,76 @@
 
-<div class="row no-gutters h-100">
 
-    <div class="col-lg-5 d-none d-lg-flex" style="background-color: rgb(22, 58, 127);">
+<!-- Imagen side -->
+
+<div class="row no-gutters h-100">
+    <div class="col-lg-5 d-none d-lg-flex" style="background-color: #083D6C;">
         <div class="d-flex h-100 p-h-40 p-v-15 flex-column justify-content-between">
-            <div>
-                <img src="assets/cropped-cropped-LOGO-CSS-GOBIERNO-NACIONAL.png" alt="" style="width: 510px;">
+            <div class="d-flex justify-content-center align-items-center">
+                <img src="assets/cropped-cropped-LOGO-CSS-GOBIERNO-NACIONAL.png" alt="" style="width: 510px; margin-top: 160px;">
             </div>
-            <div>
-                <img class="imagen1" src="assets/6634366.png" style="width: 100%;">
-                <!--
-                <img class="imagen1" src="assets/6634366.png">
-                
-                <h1 class="text-white m-b-20 font-weight-normal">Campo 1 para la imagen</h1>
-                <p class="text-white font-size-16 lh-2 w-80 opacity-08">Campo 2 imagen 2</p>
-            -->
+            <div class="d-flex justify-content-center align-items-center" style="height: 100%; margin-top: -60px;">
+                <img src="assets/6634366.png" class="img-fluid w-75">
             </div>
-<!--
-            <div class="d-flex justify-content-between">
-                <span class="text-white">CAMAS</span>
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a class="text-white text-link" href="">Terminos Legales</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="text-white text-link" href="">Privacidad</a>
-                    </li>
-                </ul>
-            </div>
-        -->
         </div>
     </div>
 
+    <!-- sistema de gestión de camas -->
 
     <div class="col-lg-7  bg-white">
         <div class="container h-100">
-            <div class="row no-gutters h-100 align-items-center">
-                
-                <div class="col-md-8 col-lg-7 col-xl-6 mx-auto">    
-                    <img src="assets/logo-css-origianal.png" style="width: 25%;">
-                    <h2>Bienvenido al</h2>
-                    <h2 style="font-weight: bold;">SISTEMA DE GESTIÓN DE CAMAS</h2>
-<!--
+            <div class="row no-gutters h-100 align-items-center">  
+                <div class="d-flex col-md-8 col-lg-7 col-xl-10 mx-auto">    
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <img src="assets/logo-css-origianal.png" style="width: 15%;">
+                    
+                    
+                    <!--  <div class="d-flex flex-column justify-content-center align-items-center text-center" style="background-color: #083D6C;" >
+                    -->
+                   
+                        <h4 style="color: #083D6C; font-size:x-large;">Bienvenido al</h4>
+                        <h4 style="font-weight: bold; color: #083D6C; font-size: 200%">SISTEMA DE GESTIÓN DE CAMAS</h4  >
+                    
+        <!--
                     <p class="m-b-30">Ingrese su Correo</p>
                 -->
+
+                <hr>
+
                     <form nz-form [formGroup]="loginForm" nzLayout="vertical" class="login-form" (ngSubmit)="submitForm()">
                         <nz-form-item>
                             <nz-form-label nzRequired nzFor="userName">Correo Electrónico</nz-form-label>
                             <nz-form-control nzErrorTip="Por favor, Ingrese su correo electónico!">
                                 <nz-input-group [nzPrefix]="prefixUser">
-                                    <input type="text" nz-input formControlName="userName" placeholder="Ingrese su Correo">
+                                    <input class="rounded" type="text" nz-input formControlName="userName" placeholder="Ingrese su Correo">
                                 </nz-input-group>
                             </nz-form-control>
                         </nz-form-item>
                         <nz-form-item>
                             <nz-form-label nzRequired nzFor="password">Contraseña</nz-form-label>
-                            <a class="font-size-13 p-t-10 text-muted" style="position:absolute; right: 0" >Olvido su contraseña ?</a>
+                        <!--
+                            <a class="font-size-8 p-t-10 text-muted" style="position:absolute; right: 0" >¿Olvido su contraseña?</a>
+                        -->
                             <nz-form-control nzErrorTip="Por favor, Ingrese su contraseña!">
                                 <nz-input-group [nzPrefix]="prefixLock">
                                     <input type="password" nz-input formControlName="password" placeholder="Ingrese su Contraseña">
                                 </nz-input-group>
                             </nz-form-control>
                         </nz-form-item>
+                    
                         <nz-form-item>
                             <nz-form-control>
-                                <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center justify-content-center">
                                     <!-- 
                                     <span class="font-size-13 text-muted">No tienes una cuenta? <a class="small" > Iniciar sesion</a></span>
                                 -->    
-                                    <button nz-button class="login-form-button" [nzType]="'primary'">Iniciar Sesion</button>
+                                    <button nz-button class="login-form-button" [nzType]="'primary'" style="border-radius: 8px; width: 70%; background-color: #083D6C;">Iniciar Sesión</button>
                                 </div>
                             </nz-form-control>
                         </nz-form-item>
                     </form>
+
+                </div>
+                    
                     <ng-template #prefixUser><i nz-icon nzType="user"></i></ng-template>
                     <ng-template #prefixLock><i nz-icon nzType="lock"></i></ng-template>
                 </div>

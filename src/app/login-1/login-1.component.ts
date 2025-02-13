@@ -7,16 +7,20 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
+import { RouterModule } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-login-1',
   standalone: true,
   imports: [ReactiveFormsModule, NzFormModule, NzInputModule, NzButtonModule
-    , NzCardModule, NzCheckboxModule
+    , NzCardModule, NzCheckboxModule, RouterModule
   ],
   templateUrl: './login-1.component.html',
 })
 export class Login1Component {
+  
 
   loginForm!: UntypedFormGroup;
 

@@ -1,0 +1,67 @@
+<p>Gestión de pisos</p>
+
+<br>
+
+<nz-content>
+
+
+
+</nz-content>
+
+<nz-layout>
+    
+
+    <nz-content>
+
+       
+        <nz-table #basicTable [nzData]="listOfData" style="color: #ffffff; margin-left: 170px; margin-right: 170px;">
+            <thead style="background-color: #083D6C;">
+              <tr>
+                <th>ID</th>
+                <th>Nombre del piso</th>
+                <th>Actualización</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (data of basicTable.data; track data) {
+                <tr>    
+                  <td>{{ data.id }}</td>
+                  <td>{{ data.piso }}</td>
+                  <td>{{ data.update }}</td>
+                  <td>
+                    <a style="background-color: #083D6C; padding: 5px; color: white; border-radius: 4px;">Editar</a>
+                    <!--<a>Action 一 {{ data.name }}</a>-->
+                    
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a style="background-color: #083D6C; padding: 5px; color: white; border-radius: 4px;">Eliminar</a>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </nz-table>
+
+    </nz-content>
+
+    <nz-footer>Footer</nz-footer>
+  </nz-layout>
+
+
+
+
+
+  <br>
+
+  <section>
+    <div class="buscar">
+        <span>Buscador</span>
+    </div>
+
+    <div class="tabla">
+        <span>Tabla</span>
+    </div>
+
+    <div class="foo">
+        <span>footer</span>
+    </div>
+  </section>
