@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
@@ -21,18 +20,17 @@ interface Person{
   acciones: boolean;
 }
 
-//API CONECTAR  
-
 @Component({
-  selector: 'app-salas',
+  selector: 'app-roles',
   standalone: true,
-  imports: [RouterModule, NzButtonModule, NzFormModule, NzInputModule, NzSelectModule
-    , NzIconModule, NzLayoutModule, NzDividerModule, NzTableModule, NzBadgeModule
+  imports: [NzButtonModule, NzFormModule, NzInputModule,
+    NzSelectModule, NzIconModule, NzLayoutModule, NzDividerModule, 
+    NzTableModule, NzBadgeModule
   ],
-  templateUrl: './salas.component.html',
-  styleUrl: './salas.component.css'
+  templateUrl: './roles.component.html',
+  styleUrl: './roles.component.css'
 })
-export class SalasComponent {
+export class RolesComponent {
 
   listOfData: Person[] = [
     {

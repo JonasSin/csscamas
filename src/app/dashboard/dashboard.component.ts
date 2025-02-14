@@ -5,9 +5,11 @@ import { Login1Component } from '../login-1/login-1.component';
 import { PisosComponent } from '../pisos/pisos.component';
 import { SalasComponent } from '../salas/salas.component';
 import { CamasComponent } from '../camas/camas.component';
+import { RolesComponent } from '../roles/roles.component';
 
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzFormModule } from 'ng-zorro-antd/form';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -18,7 +20,8 @@ import { NzFormModule } from 'ng-zorro-antd/form';
     PisosComponent,
     SalasComponent,
     CamasComponent,
-    NzIconModule 
+    RolesComponent,
+    NzIconModule
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'

@@ -1,1 +1,94 @@
-<p>camas works!</p>
+
+<br>
+<br>
+<br>
+<br>
+
+<nz-content>
+
+    <i class='fas fa-home' style='font-size:24px'></i>
+
+  <div class="d-flex align-items-center" style="margin-right: 170px; margin-left: 170px;">
+    <input nz-input placeholder="Hospital" nzSize="default" style="width: 600px; margin-right: 220px; border-radius: 12px;" />
+    <br />
+    <button nz-button nzType="primary" nzBlock style="width: 250px; background-color: #083D6C; border-radius: 12px;">Nueva Cama</button>
+  </div>
+    
+</nz-content>
+
+<nz-layout style="background-color: #ffffff;">
+
+    <div style="margin-right: 170px; margin-left: 170px; background-color: #ffffff; padding: 12px;">
+        <!--
+            <h4 style="margin-bottom: 16px">Presets:</h4>
+        <div>
+        @for (color of presetColors; track color) {
+            <nz-tag [nzColor]="color">{{ color }}</nz-tag>
+        }
+        </div>
+        <h4 style="margin: 16px 0">Custom:</h4>
+    -->
+        <div class="d-flex">
+                <nz-badge nzStatus="success" nzText="Disponible"></nz-badge>
+                
+                <nz-badge nzStatus="error" nzText="Ocupada"></nz-badge>
+                
+                <nz-badge nzStatus="warning" nzText="Mantenimiento"></nz-badge>
+        </div>
+    </div>
+    
+    <nz-content>
+   
+        <nz-table #basicTable [nzData]="listOfData" style="color: #ffffff; margin-left: 170px; margin-right: 170px;">
+            <thead style="background-color: #ffffff !important; border-radius: 5px !important;">
+              <tr>
+                <th>ID</th>
+                <th>Estado</th>
+                <th>Actualización</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (data of basicTable.data; track data) {
+                <tr>    
+                  <td>{{ data.id }}</td>
+                  <td>{{ data.piso }}</td>
+                  <td>{{ data.update }}</td>
+                  <td>
+                    <a style="background-color: #083D6C; padding: 5px; color: white; border-radius: 4px;">Editar</a>
+                    <!--<a>Action 一 {{ data.name }}</a>-->
+                    
+                    <nz-divider nzType="vertical"></nz-divider>
+                    <a style="background-color: #083D6C; padding: 5px; color: white; border-radius: 4px;">Eliminar</a>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </nz-table>
+
+    </nz-content>
+
+    <nz-footer style="background-color: #ffffff !important;">Footer</nz-footer>
+
+  </nz-layout>
+
+
+
+<!--
+  <br>
+
+  <section>
+    <div class="buscar">
+        <span>Buscador</span>
+    </div>
+
+    <div class="tabla">
+        <span>Tabla</span>
+    </div>
+
+    <div class="foo">
+        <span>footer</span>
+    </div>
+  </section>
+
+-->

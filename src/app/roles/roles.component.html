@@ -8,27 +8,9 @@
 <nz-content>
 
   <div class="d-flex align-items-center" style="margin-right: 170px; margin-left: 170px;">
-    <input nz-input placeholder="Buscar piso" nzSize="default" style="width: 600px; margin-right: 220px; border-radius: 12px;" />
+    <input nz-input placeholder="Seleccionar Rol" nzSize="default" style="width: 600px; margin-right: 220px; border-radius: 12px;" />
     <br />
-    <!--
-        <nz-select nzMode="multiple" nzPlaceHolder="Inserted are removed" [(ngModel)]="listOfSelected" style="width: 100%;">
-    
-      @for (option of listOfOption; track option) {
-        <nz-option [nzLabel]="option" [nzValue]="option" [nzHide]="!isSelected(option)"></nz-option>
-      }
-    
-    </nz-select>-->
-    <br />
-    <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 250px; background-color: #083D6C; border-radius: 12px;">Nuevo Piso</button>
-    <nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
-
-      <ng-container *nzModalContent>
-        <p>Content one</p>
-        <p>Content two</p>
-        <p>Content three</p>
-      </ng-container>
-
-    </nz-modal>
+    <button nz-button nzType="primary" nzBlock style="width: 250px; background-color: #083D6C; border-radius: 12px;">Nuevo Rol</button>
   </div>
     
 </nz-content>
@@ -41,7 +23,7 @@
             <thead style="background-color: #ffffff !important; border-radius: 5px !important;">
               <tr>
                 <th>ID</th>
-                <th>Nombre del piso</th>
+                <th>Nombre de la sala</th>
                 <th>Actualización</th>
                 <th>Acciones</th>
               </tr>
@@ -50,7 +32,7 @@
               @for (data of basicTable.data; track data) {
                 <tr>    
                   <td>{{ data.id }}</td>
-                  <td>{{ data.piso }}</td>
+                  <td>{{ data.sala }}</td>
                   <td>{{ data.update }}</td>
                   <td>
                     <a style="background-color: #083D6C; padding: 5px; color: white; border-radius: 4px;">Editar</a>

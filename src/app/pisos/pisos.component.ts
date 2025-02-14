@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-
 import { RouterModule } from '@angular/router';
 
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -16,6 +15,10 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTableModule } from 'ng-zorro-antd/table';
 
+import { FormsModule } from '@angular/forms';
+
+import { NzModalModule } from 'ng-zorro-antd/modal';
+
 type Gender = 'male' | 'female';
 
 interface Person {
@@ -31,11 +34,13 @@ interface Person {
   standalone: true,
   imports: [RouterModule, ReactiveFormsModule, NzButtonModule, NzFormModule, 
     NzInputModule, NzSelectModule, NzIconModule, NzLayoutModule,
-    NzDividerModule, NzTableModule],
+    NzDividerModule, NzTableModule, FormsModule, NzModalModule],
   templateUrl: './pisos.component.html',
   styleUrl: './pisos.component.css'
 })
 export class PisosComponent {
+
+  selectedValue = null;
 
   listOfData: Person[] = [
     {
@@ -65,10 +70,32 @@ export class PisosComponent {
       piso: 'piso 3',
       update: '11:34 am',
       acciones: true
-    },
-    
+    }
+
   ];
 
+  listOfOption = ['Apples', 'Nails', 'Bananas', 'Helicopters'];
+  listOfSelected: string[] = [];
+
+  isSelected(value: string): boolean {
+    return this.listOfSelected.indexOf(value) !== -1;
+  }
+
+  isVisible = false;
+
+  showModal(): void {
+    this.isVisible = true;
+  }
+
+  handleOk(): void {
+    console.log('Button ok clicked!');
+    this.isVisible = false;
+  }
+
+  handleCancel(): void {
+    console.log('Button cancel clicked!');
+    this.isVisible = false;
+  }
 
 
 }
