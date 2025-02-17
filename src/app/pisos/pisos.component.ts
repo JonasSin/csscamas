@@ -19,6 +19,9 @@ import { FormsModule } from '@angular/forms';
 
 import { NzModalModule } from 'ng-zorro-antd/modal';
 
+import { NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
+
+
 type Gender = 'male' | 'female';
 
 interface Person {
@@ -81,6 +84,9 @@ export class PisosComponent {
     return this.listOfSelected.indexOf(value) !== -1;
   }
 
+
+  /* Configuracion del modal, para la creación de un piso*/
+
   isVisible = false;
 
   showModal(): void {
@@ -88,14 +94,38 @@ export class PisosComponent {
   }
 
   handleOk(): void {
-    console.log('Button ok clicked!');
+    console.log('El botón fue cliqueado');
     this.isVisible = false;
   }
 
   handleCancel(): void {
-    console.log('Button cancel clicked!');
+    console.log('Boton cancelado');
     this.isVisible = false;
   }
 
+
+  /*ELIMINAR Y EDITAR UNA FILA */
+
+  confirmModal?: NzModalRef; // Para prueba ahora
+
+  constructor(private modal: NzModalService) {}
+
+  showConfirm(): void {
+    this.confirmModal = this.modal.confirm({
+      nzTitle: '¿Quieres eliminar esta cama?',
+      nzContent: 'Al hacer clic en el botón Aceptar, este cuadro de diálogo se cerrará después de 1 segundo.',
+      nzOnOk: () =>
+        new Promise((resolve, reject) => {
+          setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
+        }).catch(() => console.log('Oops errors!'))
+    });
+  }
+
+  showEdit(): void {
+    this.confirmModal = this.modal.confirm({
+      nzTitle: 'Editando...',
+      nzContent: 'Editado'
+    })
+  }
 
 }

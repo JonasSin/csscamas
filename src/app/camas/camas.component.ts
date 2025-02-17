@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
@@ -12,7 +13,10 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTableModule } from 'ng-zorro-antd/table';
 
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
+import { NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
 
 interface Person {
   id: string;
@@ -22,12 +26,14 @@ interface Person {
   acciones: boolean;
 }
 
+
 @Component({
   selector: 'app-camas',
   standalone: true,
   imports: [RouterModule, NzButtonModule, NzFormModule,
     NzInputModule, NzSelectModule, NzIconModule, NzLayoutModule,
-    NzDividerModule, NzTableModule, NzTableModule, NzBadgeModule
+    NzDividerModule, NzTableModule, NzTableModule, NzBadgeModule, NzModalModule,
+    NzFormModule, ReactiveFormsModule, FormsModule
   ],
   templateUrl: './camas.component.html',
   styleUrl: './camas.component.css'
@@ -66,5 +72,41 @@ export class CamasComponent {
 
   ];
 
+  /* Agregar cama - Modal */
+
+  isVisible = false;
+
+  showModal(){
+    this.isVisible = true;
+  }
+
+  handleCancel(){
+    this.isVisible = false;
+    console.log('El botón fue cliqueado');
+
+  }
+
+  handleOk(){
+    this.isVisible = false;
+    console.log('El boton fue cancelado');
+  }
+
+  selectedValue = null;
+
+
+  confirmModal?: NzModalRef; // Para prueba ahora
+
+  constructor(private modal: NzModalService) {}
+
+  showConfirm(): void {
+    this.confirmModal = this.modal.confirm({
+      nzTitle: '¿Quieres eliminar esta cama?',
+      nzContent: 'Al hacer clic en el botón Aceptar, este cuadro de diálogo se cerrará después de 1 segundo.',
+      nzOnOk: () =>
+        new Promise((resolve, reject) => {
+          setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
+        }).catch(() => console.log('Oops errors!'))
+    });
+  }
 
 }

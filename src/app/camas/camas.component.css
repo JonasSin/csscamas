@@ -48,10 +48,55 @@
 
   nz-badge{
     margin-right: 20px;
+  }   
+
+  /*
+  [nz-form] {
+    max-width: 600px;
   }
+*/
+
+nz-select {
+  width: 100%;
+}
+
+::ng-deep .ant-modal-header{
+  background-color: #083D6C;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  
+}
+
+::ng-deep .ant-btn-text{
+  background-color: #d83e3e;
+}
+
+::ng-deep .ant-btn:hover{
+  background-color: #fff;
+  color: #42aaf5;
+}
 
 
+::ng-deep .ant-modal-content{
+  border-radius: 15px;
+  color: #fff;
+}
+   
+::ng-deep .ant-modal-title{
+  color: #fff;
+}
 
+::ng-deep .ant-btn  {
+  /* Botón secundario */
+  background-color: #083D6C;
+  border-radius: 8px;
+  color: #fefefe;
+}
+
+::ng-deep .ant-modal-footer{
+  justify-content: center;
+  align-items: center;
+}
 
 
   

@@ -19,16 +19,8 @@
     
     </nz-select>-->
     <br />
-    <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 250px; background-color: #083D6C; border-radius: 12px;">Nuevo Piso</button>
-    <nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
-
-      <ng-container *nzModalContent>
-        <p>Content one</p>
-        <p>Content two</p>
-        <p>Content three</p>
-      </ng-container>
-
-    </nz-modal>
+    <button nz-button [nzType]="'primary'" style="width: 250px; background-color: #083D6C; border-radius: 12px;">Nuevo Piso</button>
+  
   </div>
     
 </nz-content>
@@ -53,11 +45,11 @@
                   <td>{{ data.piso }}</td>
                   <td>{{ data.update }}</td>
                   <td>
-                    <a style="background-color: #083D6C; padding: 5px; color: white; border-radius: 4px;">Editar</a>
+                    <button nz-button nzType="primary" (click)="showEdit()">Editar</button>
                     <!--<a>Action 一 {{ data.name }}</a>-->
                     
                     <nz-divider nzType="vertical"></nz-divider>
-                    <a style="background-color: #083D6C; padding: 5px; color: white; border-radius: 4px;">Eliminar</a>
+                    <button nz-button nzType="primary" (click)="showConfirm()">Eliminar</button>
                   </td>
                 </tr>
               }
