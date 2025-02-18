@@ -1,0 +1,100 @@
+<header class="header-gestion" style="background-color: #f2f4ff;">
+    
+    <div class="d-flex justify-content-between" >
+        <div class="container1" >
+            <h3>Bienvenido al</h3>
+            <h1>SISTEMA DE GESTIÓN DE CAMAS</h1>
+        </div>
+            <!--  Usuario registrado  -->
+        <div class="d-flex align-items-center" style="padding-right: 50px; padding-top: 30px;">
+            
+            <i style='font-size:24px' class='far'>&#xf2bd;</i>
+            <p> Dr. Juan Perez </p>
+           
+        </div>
+    </div>
+    
+</header>
+
+<section style="background-color: #f2f4ff;">
+    
+    <div class="justify-content-between align-items-center">
+        
+            <div style="background: #f2f4ff; padding:30px; margin-left: 20px; margin-right: 20px;">
+                <div nz-row [nzGutter]="12">
+                  <div nz-col [nzSpan]="6">
+                    <nz-card>
+                        <i class='fas fa-bed' style="font-size:36px; padding-bottom: 10px;"></i>
+                        <h4>Total de Camas</h4>
+                        <h2>###</h2>
+                        <p style="color: rgb(44, 171, 44);">% vs mes anterior</p>
+                      </nz-card>
+                  </div>
+
+                  <div nz-col [nzSpan]="6">
+                    <nz-card>
+                        <i class='fas fa-ban' style='font-size:36px; padding-bottom: 10px;'></i>
+                        <h4>Ocupación</h4>
+                      <h2>###%</h2>
+                      <p style="color: rgb(251, 72, 72);"># vs mes anterior</p>
+                    </nz-card>
+                  </div>
+
+                  <div nz-col [nzSpan]="6">
+                    <nz-card>
+                        <i class='fas fa-clock' style='font-size:36px; padding-bottom: 10px;'></i>
+                        <h4>Tiempo Promedio</h4>
+                      <h2>###</h2>
+                      <p style="color: rgb(27, 182, 27);">#.# días</p>
+                    </nz-card>
+                  </div>
+
+                  <div nz-col [nzSpan]="6">
+                    <nz-card>
+                        <i class='fas fa-exclamation-triangle' style='font-size:36px; padding-bottom: 10px;'></i>
+                        <h4>Alertas Activas</h4>
+                      <h2>###</h2>
+                      <p style="color: rgb(251, 72, 72);"># nuevas</p>
+                    </nz-card>
+                  </div>
+                </div>
+              </div>
+    </div>
+
+    <div class="container-2">
+
+        <div style="background: #f2f4ff; ">
+            <div nz-row [nzGutter]="8">
+              <div nz-col [nzSpan]="14" style="margin-right: 60px;">
+                <nz-card nzTitle="Ocupación por Piso">
+                  <p>Contenido</p>
+                </nz-card>
+              </div>
+              <div nz-col [nzSpan]="8">
+                <nz-card nzTitle="Alertas recientes">
+                  <p>Contenido</p>
+                </nz-card>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="container-3">
+        <div style="background: #f2f4ff;">
+            <div nz-row [nzGutter]="8">
+              <div nz-col [nzSpan]="14" style="margin-right: 60px;">
+                <nz-card nzTitle="Estado de camas por sala">
+                  <p>Contenido</p>
+                </nz-card>
+              </div>
+              <div nz-col [nzSpan]="8">
+                <nz-card nzTitle="Actividades recientes">
+                  <p>Contenido</p>
+                </nz-card>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+
+</section>
