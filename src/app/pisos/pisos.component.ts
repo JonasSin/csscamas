@@ -96,6 +96,7 @@ export class PisosComponent {
   handleOk(): void {
     console.log('El botón fue cliqueado');
     this.isVisible = false;
+    
   }
 
   handleCancel(): void {
@@ -127,5 +128,12 @@ export class PisosComponent {
       nzContent: 'Editado'
     })
   }
+
+
+
+  /*MODAL */
+
+
+  
 
 }

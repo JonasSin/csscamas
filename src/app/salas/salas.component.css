@@ -47,6 +47,35 @@
   }
 
 
+  /*Estilos del modal*/
+
+  ::ng-deep .ant-modal-header{
+    background-color: #083D6C;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  ::ng-deep .ant-modal-content{
+    border-radius: 15px;
+    color: #fff;
+  }
+
+  ::ng-deep .ant-modal-title{
+    color: #fff;
+  }
+
+
+  ::ng-deep .ant-btn  {
+    /* Botón secundario */
+    background-color: #083D6C;
+    border-radius: 8px;
+    color: #fefefe;
+  }
+
+  nz-select {
+    width: 100%;
+  }
+
 
   
 

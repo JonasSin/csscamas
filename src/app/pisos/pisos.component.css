@@ -39,18 +39,51 @@
     line-height: 120px;
   }
 
-  
   th {
     background-color: #083D6C !important;
     color: #fff !important;
-    text-align: center;
   }
 
+button{
+  background-color: #083D6C;
+  border-radius: 12px;
+  border: none;
+}
 
+button:hover{
+  background-color: #fff !important;
+  color: blue !important;
+  border: none;
+}
 
-  
+/*MODAL*/
 
+nz-select {
+  width: 100%;
+}
 
+::ng-deep .ant-btn  {
+  /* Botón secundario */
+  background-color: #083D6C;
+  border-radius: 8px;
+  color: #fefefe;
+}
 
+::ng-deep .ant-modal-header{
+  background-color: #083D6C;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
 
+::ng-deep .ant-modal-content{
+  border-radius: 15px;
+  color: #fff;
+}
 
+::ng-deep .ant-modal-title{
+  color: #fff;
+}
+
+::ng-deep .ant-table-cell{
+  background-color: #fff;
+}

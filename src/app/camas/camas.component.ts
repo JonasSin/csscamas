@@ -109,4 +109,11 @@ export class CamasComponent {
     });
   }
 
+  showEdit(){
+    this.confirmModal = this.modal.confirm({
+      nzTitle: 'Editando...',
+      nzContent: 'Editado'
+    })
+  }
+
 }
