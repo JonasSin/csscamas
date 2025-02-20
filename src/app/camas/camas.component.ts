@@ -17,6 +17,7 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
+import { Observable } from 'rxjs';
 
 interface Person {
   id: string;
@@ -39,6 +40,10 @@ interface Person {
   styleUrl: './camas.component.css'
 })
 export class CamasComponent {
+
+
+  
+
 
   listOfData: Person[] = [
     {
