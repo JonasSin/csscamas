@@ -4,6 +4,7 @@ import { SalasComponent } from './salas/salas.component';
 import { CamasComponent } from './camas/camas.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GestionComponent } from './gestion/gestion.component';
+import { ServiciosComponent } from './servicios/servicios.component';
 
 import { title } from 'process';
 import { PisosComponent } from './pisos/pisos.component';
@@ -39,6 +40,11 @@ export const routes: Routes = [
         path: 'camas',
         component: CamasComponent,
         title: 'Camas'
+    },
+    {
+        path: 'servicios',
+        component: ServiciosComponent,
+        title: 'Servicios'
     }
 
 ];

@@ -1,0 +1,10 @@
+
+.containerP { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 1px 2px 15px #acd1f6; 
+    min-height: 100px;
+    padding: 40px;
+}

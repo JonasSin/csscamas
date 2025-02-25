@@ -6,17 +6,15 @@
 
 <nz-content>
 
-    <i class='fas fa-home' style='font-size:24px'></i>
-
-  <div class="d-flex align-items-center" style="margin-right: 170px; margin-left: 170px;">
-    <input nz-input placeholder="Hospital" nzSize="default" style="width: 600px; margin-right: 220px; border-radius: 12px;" />
+    <div class="container1">
+    
+    <div class="d-flex align-items-center justify-content-between margin-bottom: 20px">
+      <input nz-input placeholder="Hospital" nzSize="default" style="width: 500px; border-radius: 12px;" />
     <br />
-    <!--
-    <button nz-button nzType="primary" nzBlock style="width: 250px; background-color: #083D6C; border-radius: 12px;">Nueva Cama</button>
-    -->
+      <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 250px; background-color: #083D6C; border-radius: 12px;"><span>Nueva Cama</span></button>
     
-    <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 250px; background-color: #083D6C; border-radius: 12px;"><span>Nueva Cama</span></button>
-    
+    </div>
+
     <nz-modal [(nzVisible)]="isVisible" nzTitle="Agregar nueva cama" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" nzOkText="Guardar" nzCancelText="Cancelar" class="custom-modal">
       <ng-container *nzModalContent>
 

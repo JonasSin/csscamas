@@ -7,28 +7,21 @@
 
 <nz-content>
 
-  <div class="d-flex align-items-center" style="margin-right: 170px; margin-left: 170px;">
-    <input nz-input placeholder="Buscar piso" nzSize="default" style="width: 600px; margin-right: 220px; border-radius: 12px;" />
+  <div class="container1">
+
+    <div class="d-flex align-items-center justify-content-between" style="margin-bottom: 20px;">
+      <input nz-input placeholder="Buscar piso" nzSize="default" style="width: 500px; border-radius: 12px;" />
     <br />
-    <!--
-        <nz-select nzMode="multiple" nzPlaceHolder="Inserted are removed" [(ngModel)]="listOfSelected" style="width: 100%;">
-    
-      @for (option of listOfOption; track option) {
-        <nz-option [nzLabel]="option" [nzValue]="option" [nzHide]="!isSelected(option)"></nz-option>
-      }
-    
-    </nz-select>-->
-    <br />
-    <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 250px; background-color: #083D6C; border-radius: 12px;"><span>Nuevo Piso</span></button>
-  
-    <nz-modal [(nzVisible)]="isVisible" nzTitle="Agregar nueva cama" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" nzOkText="Guardar" nzCancelText="Cancelar" class="custom-modal">
+    <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 250px; background-color: #083D6C; border-radius: 12px;"><span>Nuevo Piso</span></button>  
+    </div>
+    <nz-modal [(nzVisible)]="isVisible" nzTitle="Agregar nuevo Piso" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" nzOkText="Guardar" nzCancelText="Cancelar" class="custom-modal">
       <ng-container *nzModalContent>
         <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Nombre del Piso" [(ngModel)]="selectedValue">
           <nz-option nzLabel="Jack" nzValue="jack2"></nz-option>
           <nz-option nzLabel="Lucy" nzValue="lucy1"></nz-option>
           <nz-option nzLabel="Tom" nzValue="tom3"></nz-option>
         </nz-select>
-        <br><br>
+        <br><br>  
         <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Hospial" [(ngModel)]="selectedValue">
           <nz-option nzLabel="Jonas" nzValue="Jonas"></nz-option>
           <nz-option nzLabel="Luis" nzValue="Luis"></nz-option>
@@ -37,14 +30,12 @@
       </ng-container>
     </nz-modal>
 
-
-
   </div>
     
 </nz-content>
 
-<nz-layout>
-    
+
+<nz-layout>    
     <nz-content>
    
         <nz-table #basicTable [nzData]="listOfData" style="color: #ffffff; margin-left: 170px; margin-right: 170px;">

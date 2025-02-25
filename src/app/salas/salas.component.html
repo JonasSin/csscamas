@@ -7,12 +7,16 @@
 
 <nz-content>
 
-  <div class="d-flex align-items-center" style="margin-right: 170px; margin-left: 170px;">
-    <input nz-input placeholder="Seleccionar hospital" nzSize="default" style="width: 600px; margin-right: 220px; border-radius: 12px;" />
-    <br />
-    <input nz-input placeholder="Seleccionar Piso" nzSize="default" style="width: 600px; margin-right: 220px; border-radius: 12px;" />
-    <br />
-    <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 250px; background-color: #083D6C; border-radius: 12px;"><span>Nueva Sala</span></button>
+  <div class="container1">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <input nz-input placeholder="Seleccionar hospital" nzSize="default" style="width: 400px; margin-right: 50px; border-radius: 12px;" />
+      <br />
+      <input nz-input placeholder="Seleccionar Piso" nzSize="default" style="width: 400px; margin-right: 50px; border-radius: 12px;" />
+      <br />
+      <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 400px; background-color: #083D6C; border-radius: 12px;"><span>Nueva Sala</span></button>
+    </div>
+    
   
     <nz-modal [(nzVisible)]="isVisible" nzTitle="Agregar nueva cama" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" nzOkText="Guardar" nzCancelText="Cancelar" class="custom-modal">
       <ng-container *nzModalContent>
@@ -41,8 +45,6 @@
         </nz-select>
       </ng-container>
     </nz-modal>
-  
-  
   
   </div>
     

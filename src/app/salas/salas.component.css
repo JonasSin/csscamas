@@ -2,6 +2,13 @@
     text-align: center;
   }
 
+
+  .container1{
+    margin-right: 170px;
+    margin-left: 170px;
+    justify-content: space-between;
+  }
+
   nz-header,
   nz-footer {
     background: #7dbcea;

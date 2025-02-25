@@ -1,25 +1,21 @@
 
 <main class="main">
     <header>
-        <div class="container-fluid p-3 text-white" style="background-color: #083D6C; box-shadow: 1px 2px 75px #083D6C;">
-            <div class="d-flex align-items-center justify-content-between" >
+        <div class="containerP d-flex ">
+            <div class="d-flex justify-content-between align-items-center" >
                 
                 <!-- Botón de Gestión de Camas (Izquierda) -->
-                <div >
-                    <button class="btn btn-light me-2">
-                        <i class='fas fa-arrow-left' style='font-size:18px'></i>
-                    </button>
-                    <span class="text-white">Gestión de Camas</span>
+                <div style="width: 25%">
+                    <nz-input-group [nzSuffix]="suffixIconSearch" style="width: 100%; border-radius: 55px;">
+                        <input type="text" nz-input placeholder="Buscar..." />
+                      </nz-input-group>
+                      <ng-template #suffixIconSearch>
+                        <i class='fas fa-search' style='font-size:16px'></i>
+                      </ng-template>
                 </div>
     
-                <!-- Logo del Gobierno Nacional (Centro) -->
-                <div>
-                    <img src="assets/cropped-cropped-LOGO-CSS-GOBIERNO-NACIONAL.png" alt="Gobierno de Panamá" class="img-fluid" style="width: 500px;">
-                </div>
-    
-                <!-- Botón "Ir al inicio" (Derecha) -->
                 <div class="d-flex align-items-center" >
-                    <a [routerLink]="'/'" class="text-white"> Ir al Inicio </a>
+                    <a [routerLink]="'/'" class="text-white" style="color: black !important;"> Ir al Inicio </a>
 <!--                    
                     <span class="text-white me-2">Ir al inicio</span>                 
 -->
@@ -31,15 +27,106 @@
         </div>
     </header>
 
+    <div nz-row>
+        <div nz-col nzSpan="7" style="background-color: rgb(236, 228, 255); padding: 20px;">
+            <div class="menu-container">
+
+                <ul nz-menu nzMode="inline" style="border-radius: 20px;">
+                    <h3 style="margin: 20px; font-size:large;">Gestión de Camas</h3>
+                    <li nz-submenu nzTitle="Control de Camas" nzIcon="mail" nzOpen>
+                      <ul>
+                        <li nz-menu-group nzTitle="Agregar Cama">
+                          <ul>
+                            <li nz-menu-item nzSelected>Option 1</li>
+                            <li nz-menu-item>Option 2</li>
+                          </ul>
+                        </li>
+                        <li nz-menu-group nzTitle="Agregar Sala">
+                          <ul>
+                            <li nz-menu-item>Option 3</li>
+                            <li nz-menu-item>Option 4</li>
+                          </ul>
+                        </li>
+                        <li nz-menu-group nzTitle="Agregar Piso">
+                            <ul>
+                              <li nz-menu-item>Option 3</li>
+                              <li nz-menu-item>Option 4</li>
+                            </ul>
+                          </li>
+                          <li nz-menu-group nzTitle="Agregar Hospial">
+                            <ul>
+                              <li nz-menu-item>Option 3</li>
+                              <li nz-menu-item>Option 4</li>
+                            </ul>
+                          </li>
+                          <li nz-menu-group nzTitle="Agregar Usuario">
+                            <ul>
+                              <li nz-menu-item>Option 3</li>
+                              <li nz-menu-item>Option 4</li>
+                            </ul>
+                          </li>
+                          <li nz-menu-group nzTitle="Agregar Sala">
+                            <ul>
+                              <li nz-menu-item>Option 3</li>
+                              <li nz-menu-item>Option 4</li>
+                            </ul>
+                          </li>
+
+
+                      </ul>
+                    </li>
+<!--
+                    <li nz-submenu nzTitle="Navigation Two" nzIcon="appstore">
+                      <ul>
+                        <li nz-menu-item>Option 5</li>
+                        <li nz-menu-item>Option 6</li>
+                        <li nz-submenu nzTitle="Submenu">
+                          <ul>
+                            <li nz-menu-item>Option 7</li>
+                            <li nz-menu-item>Option 8</li>
+                            <li nz-submenu nzTitle="Submenu">
+                              <ul>
+                                <li nz-menu-item>Option 9</li>
+                                <li nz-menu-item>Option 10</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li nz-submenu nzTitle="Navigation Three" nzIcon="setting">
+                      <ul>
+                        <li nz-menu-item>Option 11</li>
+                        <li nz-menu-item>Option 12</li>
+                        <li nz-menu-item>Option 13</li>
+                      </ul>
+                    </li>
+
+                -->
+                  </ul>
+
+            </div>
+        </div>
+
+        <!--Seccion-->
+
+        <div nz-col nzSpan="17" style="background-color: cadetblue;">
+                
+            <div>
+                <app-gestion></app-gestion>
+            </div>
+            
+        </div>
+      </div>
+
     <br>
     <br>
     <br>
     <br>
+
+
 <!--
     <app-gestion></app-gestion>
--->
-
-
         <div class="align-items-center justify-content-center">
             <div>
                 <app-pisos></app-pisos>
@@ -53,8 +140,5 @@
             <div>
                 <app-roles></app-roles>
             </div>
-        </div>
-    
-
-
-
+        </div>    
+-->
