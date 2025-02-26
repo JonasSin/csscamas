@@ -15,6 +15,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 
 @Component({
@@ -34,7 +35,8 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     NzFormModule,
     FormsModule,
     NzGridModule,
-    NzMenuModule
+    NzMenuModule,
+    NzDividerModule
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
