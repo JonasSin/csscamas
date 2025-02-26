@@ -15,7 +15,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzDividerModule } from 'ng-zorro-antd/divider'
 
 
 @Component({
@@ -26,7 +26,7 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
     Login1Component,
     PisosComponent,
     SalasComponent,
-    CamasComponent,
+    CamasComponent, 
     RolesComponent,
     GestionComponent,
     NzIconModule,

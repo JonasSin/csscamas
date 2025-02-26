@@ -12,7 +12,7 @@
     <div class="d-flex align-items-center justify-content-between" style="margin-bottom: 20px;">
       <input nz-input placeholder="Buscar piso" nzSize="default" style="width: 500px; border-radius: 12px;" />
     <br />
-    <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 250px; background-color: #083D6C; border-radius: 12px;"><span>Nuevo Piso</span></button>  
+      <button nz-button [nzType]="'primary'" (click)="showModal()" style="width: 250px; background-color: #083D6C; border-radius: 12px;"><span>Nuevo Piso</span></button>  
     </div>
     <nz-modal [(nzVisible)]="isVisible" nzTitle="Agregar nuevo Piso" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" nzOkText="Guardar" nzCancelText="Cancelar" class="custom-modal">
       <ng-container *nzModalContent>
