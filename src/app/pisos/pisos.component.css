@@ -68,7 +68,7 @@
       width: 100%;
     }
 
-    ::ng-deep .ant-btn  {
+    ::ng-deep .ant-btn {
       /* Botón secundario */
       background-color: #083D6C;
       border-radius: 8px;
