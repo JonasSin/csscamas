@@ -2,19 +2,15 @@
 <div style="margin: 10px;">
 
 <header class="header-gestion" style="background-color: #FFFFFF;">  
-  <p>Crear servicios</p>
-    <div class="d-flex justify-content-between" >
-              
+  
+    <div class="container" style="display: grid;">
+      <p style="display: grid; margin-top: 10px; color: #b19797;">Crear servicios</p>
         <div class="container1" >
             <h1>Control de Camas</h1>
             <p>Servicio para la Gestión y admnistración de camas dentro de la red de hospitales de la CSS</p>
         </div>
             <!--  Usuario registrado  -->
-        <div class="d-flex align-items-center" style="padding-right: 50px; padding-top: 30px;">
-            
-            <i style='font-size:24px' class='far'>&#xf2bd;</i>
-            <p> Dr. Juan Perez </p>
-        </div>
+       
     </div>
 
 </header>
@@ -24,13 +20,13 @@
     <div class="justify-content-between align-items-center">
         
             <div class="container-card">
-                <div nz-row [nzGutter]="12">
+                <div nz-row [nzGutter]="24">
                   <div nz-col [nzSpan]="6">
                     <nz-card>
                         <i class='fas fa-bed' style="font-size:36px; padding-bottom: 10px;"></i>
                         <h4>Total de Camas</h4>
                         <h2>###</h2>
-                        <p style="color: rgb(44, 171, 44);">% vs mes anterior</p>
+                        <p class="title-card" style="color: rgb(44, 171, 44);">% vs mes anterior</p>
                       </nz-card>
                   </div>
 
@@ -39,7 +35,7 @@
                         <i class='fas fa-ban' style='font-size:36px; padding-bottom: 10px;'></i>
                         <h4>Ocupación</h4>
                       <h2>###%</h2>
-                      <p style="color: rgb(251, 72, 72);"># vs mes anterior</p>
+                      <p class="title-card" style="color: rgb(251, 72, 72);"># vs mes anterior</p>
                     </nz-card>
                   </div>
 
@@ -48,7 +44,7 @@
                         <i class='fas fa-clock' style='font-size:36px; padding-bottom: 10px;'></i>
                         <h4>Tiempo Promedio</h4>
                       <h2>###</h2>
-                      <p style="color: rgb(27, 182, 27);">#.# días</p>
+                      <p class="title-card" style="color: rgb(27, 182, 27);">#.# días</p>
                     </nz-card>
                   </div>
 
@@ -57,7 +53,7 @@
                         <i class='fas fa-exclamation-triangle' style='font-size:36px; padding-bottom: 10px;'></i>
                         <h4>Alertas Activas</h4>
                       <h2>###</h2>
-                      <p style="color: rgb(251, 72, 72);"># nuevas</p>
+                      <p class="title-card" style="color: rgb(251, 72, 72);"># nuevas</p>
                     </nz-card>
                   </div>
                 </div>
@@ -69,7 +65,10 @@
             <div nz-row [nzGutter]="8">
               <div nz-col [nzSpan]="14" style="margin-right: 45px;">
                 <nz-card nzTitle="Ocupación por Piso">
-                  <p>Contenido</p>
+                  <!--<p>Contenido</p>
+                
+                  <app-pisos/>-->
+
                 </nz-card>
               </div>
               <div nz-col [nzSpan]="8">
